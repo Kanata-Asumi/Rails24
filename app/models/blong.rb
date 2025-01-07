@@ -1,0 +1,2 @@
+class Blong < ApplicationRecord
+end

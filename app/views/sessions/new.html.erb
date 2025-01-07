@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ログイン画面</title>
+    </head>
+
+    <body>
+        <h1>シェアホビ</h1>
+
+        <div class="login">
+            <div class="login_area">
+                <%= form_for(:session, url: login_path) do |f| %>
+
+                    <%= f.label :学生番号 %> <br><span class="login_warning">※最初の文字は小文字にしてください</span><br>
+                    <div class="login_space"></div>
+                    <%= f.text_field :name, placeholder: "ex) s2450xx" %><br><br>
+                    
+                    <%= f.label :パスワード %> <br>
+                    <div class="login_space"></div>
+                    <%= f.password_field :password, placeholder: "ex) shimadai"%><br><br>
+                    
+                    <div class="login_buttom">
+                        <%= f.submit "ログイン", class:"login_button_size" %>
+                    </div>
+                <% end %>
+            </div>
+            <br><br>
+            <span class="login_error_message"><%= @error_message %></span>
+        </div>
+    </body>
+</html>

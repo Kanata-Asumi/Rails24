@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @toko %>
+
+<div>
+  <%= link_to "Edit this toko", edit_toko_path(@toko) %> |
+  <%= link_to "Back to tokos", tokos_path %>
+
+  <%= button_to "Destroy this toko", @toko, method: :delete %>
+</div>

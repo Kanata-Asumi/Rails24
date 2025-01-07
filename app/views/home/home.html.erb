@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>シェアホビホーム画面</title>
+    </head>
+    <body>
+        <h1>シェアホビ</h1>
+        <div class="all">
+            <h2>Home</h2>
+
+            <% # ボタンの作成、各ページへの移動（logoutはtop.html.erbに飛ぶ） %>
+            <button type="button" onclick="location.href='<%= new_path %>'" class="custom-button">
+                ユーザー情報
+            </button>
+
+            <button type="button" onclick="location.href='<%= choice_path %>'" class="custom-button">
+                ホビー選択
+            </button>
+
+            <button type="button" onclick="location.href='<%= view_path %>'" class="custom-button">
+                ホビー投稿一覧
+            </button>
+
+            <button type="button" onclick="location.href='<%= logout_path %>'" class="custom-button">
+                ログアウト
+            </button>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tanomu %>
+
+<div>
+  <%= link_to "Edit this tanomu", edit_tanomu_path(@tanomu) %> |
+  <%= link_to "Back to tanomus", tanomus_path %>
+
+  <%= button_to "Destroy this tanomu", @tanomu, method: :delete %>
+</div>

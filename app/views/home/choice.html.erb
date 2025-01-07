@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ホビー投稿一覧</title>
+    </head>
+
+    <body>
+        <h1>シェアホビ</h1>
+
+        <div class="menuall">
+            <span class="menuhome"><%= link_to "Home", home_path %></span>
+            <span> > </span>
+            <span class="blue">ホビー選択</span>
+        </div>
+        <br><br>
+        <%= form_with model: @hobby_selecting do |f| %>
+            <div class = "text_area">
+                <div class = "login_area_2">
+                    <%= f.label :ユーザー名 %>
+                    <br>
+                    <%= f.text_field :poster, placeholder: "例) s2450xx" %>
+                </div>
+            </div>
+            <div class="checkbox-list">
+                以下の趣味から表示したい趣味を選択してください．
+                <%= f.collection_check_boxes :hobby_id, Hobby.all, :hobbynumber, :hobbyname do |b| %>
+                <div class="checkbox-item">
+                    <%= b.check_box %> <%= b.label %>
+                </div>
+                <% end %>
+
+                <div class="submit-button">
+                    <%= f.submit '送信' %>
+                </div>
+            </div>
+        <% end %>
+    </body>
+</html>

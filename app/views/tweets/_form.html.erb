@@ -1,0 +1,31 @@
+<%= form_with(model: tweet) do |form| %>
+  <% if tweet.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
+
+      <ul>
+        <% tweet.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = "newtit">
+    <%= form.label :タイトル, style: "display: block" %>
+  </div>
+  <div class = "newtweet">
+    <%= form.text_field :title %>
+  </div>
+
+  <div class = "newtit">
+    <%= form.label :テキスト, style: "display: block" %>
+  </div>
+    <div class = "newtweet">
+    <%= form.text_field :content %>
+  </div>
+
+  <div class = "newbut">
+    <%= form.submit %>
+  </div>
+<% end %>

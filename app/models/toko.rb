@@ -1,0 +1,2 @@
+class Toko < ApplicationRecord
+end

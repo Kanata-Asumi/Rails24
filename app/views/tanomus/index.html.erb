@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tanomus</h1>
+
+<div id="tanomus">
+  <% @tanomus.each do |tanomu| %>
+    <%= render tanomu %>
+    <p>
+      <%= link_to "Show this tanomu", tanomu %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New tanomu", new_tanomu_path %>

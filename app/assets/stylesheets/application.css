@@ -1,0 +1,473 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #00C4F0;
+    text-align: left;
+}
+
+.all {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.custom-button {
+    padding: 25px;
+    margin-bottom: 40px;
+    font-size: 35px;
+    background-color: #00c4f0;
+    border: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+/*ログイン前の画面*/
+.before_login {
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.before_login span {
+    /*text-decoration: underline solid red auto;*/
+    background: linear-gradient(transparent 50%, yellow 50%);
+    /*font-weight: bold;*/
+}
+
+.before_login_ul {
+    width: 120px;
+    margin: auto;
+    text-align: left;
+}
+
+/*ログイン画面*/
+.login {
+    text-align: center;
+    font-size: 25px;
+}
+
+.login_area {
+    display: inline-block;
+    text-align: left;
+    /*background-color: orange;*/
+}
+
+.login_buttom {
+    /*ログインボタンの位置調整*/
+    text-align: right;
+}
+
+/*入力フォームのサイズを調整*/
+input[type="text"] {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+
+input[type="password"] {
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.login_button_size {
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    color: white;
+    background-color: #3366FF;
+    border: 2px solid;
+}
+
+.login_space {
+    padding: 3px;
+}
+
+.login_error_message {
+    color: red;
+}
+
+.login_warning {
+    font-size: 16px;
+}
+
+/* どこの画面？*/
+.a {
+    text-align: center;
+    font-size: 15px;
+    margin: 50px;
+}
+
+.e {
+    text-align: center;
+    font-size: 15px;
+    margin: 50px;
+}
+
+.select1 {
+    font-size: 12px;
+    color: gray;
+    padding: 10px;
+    border-color: rgb(248, 15, 15);
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.w {
+    text-align: center;
+}
+
+#b {
+    border: solid 3px;
+    width: auto;
+    margin: 0.5em;
+    padding: 20px;
+    border-color: rgb(248, 15, 15);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.d {
+    font-size: 15px;
+
+}
+
+.f {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 50px;
+    background-color: rgb(231, 14, 14);
+    font-size: 25px;
+    margin-top: 60px;
+    margin-left: 200px;
+    color: rgb(244, 242, 242);
+}
+
+/*投稿一覧*/
+.menuall {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+    text-align: left;
+
+    .menuhome,
+    .blue {
+        color: #00C4F0;
+    }
+}
+
+.tweetviews {
+    background-color: #60e2ff;
+    border: 1px solid #333333;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.profile {
+    text-align: center;
+}
+
+/*ユーザ情報*/
+.editprofile {
+    text-align: center;
+    font-size: 25px;
+}
+
+.login_area_2 {
+    display: inline-block;
+    text-align: left;
+
+    input[type="text"] {
+        width: 200px;
+        height: 25px;
+        margin: 5px;
+    }
+
+    select {
+        width: 208px;
+        height: 30px;
+        margin: 5px;
+    }
+    .btn {
+        text-align: right;
+        margin-right: 60px;
+    }
+
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/*新規投稿*/
+.newtweet {
+    input[type="text"] {
+        width: 250px;
+        height: 25px;
+        margin-bottom: 50px;
+    }
+
+    text-align: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 全体を中央に揃える */
+    font-family: Arial, sans-serif;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* チェックボックスリストを左揃え */
+    align-items: center;
+    gap: 10px;
+    /* 各項目の間隔 */
+    position: relative;
+    /* 送信ボタンを右下に配置するために相対位置に */
+    width: 100%;
+    /* ラベルを画面の横幅いっぱいに */
+    font-size: 1.5em;
+    /* チェックボックスとラベルのフォントサイズを1.5倍 */
+
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    /* チェックボックスとラベルの間隔 */
+    transform: scale(1.3);
+    /* チェックボックスを1.5倍に */
+}
+
+.checkbox-item label {
+    font-size: 20px;
+    /* ラベルを1.5倍に */
+    width: 100%;
+    /* ラベルの横幅を最大化 */
+    white-space: nowrap;
+    /* 改行を防ぐ */
+    overflow: hidden;
+    /* 長いテキストが切れないようにする */
+    text-overflow: ellipsis;
+    /* 長いテキストの省略を表示 */
+}
+
+.submit-button {
+    margin-left: 230px;
+    /* 送信ボタンをチェックボックスの右側に配置 */
+    margin-top: 10px;
+    /* 上に少し余白を追加 */
+    font-size: 1.1em;
+    /* ボタンのフォントサイズを0.7倍に */
+    padding: 7px 15px;
+    /* ボタンの内側の余白を調整 */
+    background-color: #3366FF;
+    /* 背景色 */
+    color: white;
+    /* 文字色 */
+    border: none;
+    /* 枠線を削除 */
+    border-radius: 5px;
+    /* 角を丸く */
+    cursor: pointer;
+    /* ホバー時にカーソルをポインタに */
+}
+
+/* 送信ボタンのスタイルを変更 */
+.input[type="submit"] {
+    font-size: 1.1em;
+    /* ボタンのフォントサイズを0.7倍に */
+    padding: 7px 15px;
+    /* ボタンの内側の余白を調整 */
+    background-color: #3366FF;
+    /* 背景色 */
+    color: white;
+    /* 文字色 */
+    border: none;
+    /* 枠線を削除 */
+    border-radius: 5px;
+    /* 角を丸く */
+    cursor: pointer;
+    /* ホバー時にカーソルをポインタに */
+}
+
+.input[type="submit"]:hover {
+    background-color: #2853D1;
+    /* ホバー時の色 */
+}
+
+/* ホームボタンのスタイル */
+.home-button {
+    align-self: flex-start;
+    /* 画面左端に配置 */
+    margin-left: 20px;
+    /* 左端に少し余白を追加 */
+    padding: 5px 10px;
+    /* ボタンの内側の余白を少なく */
+    font-size: 0.8em;
+    /* 文字サイズを少し小さく */
+    border: none;
+    /* 背景色なしでデフォルトのスタイルにする */
+    border-radius: 5px;
+    /* 角を丸く */
+    cursor: pointer;
+    /* ホバー時にカーソルをポインタに */
+}
+
+.home-button:hover {
+    background-color: #f0f0f0;
+    /* ホバー時の色を薄く変更 */
+}
+
+.newtit {
+    text-align: center;
+    margin-right: 200px;
+}
+
+.newbut {
+    margin-left: 150px;
+}
+
+/* ホビー選択画面*/
+.text_area {
+    text-align: center;
+    /*font-size: 1.5em; */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* 垂直方向で中央に揃える */
+    align-items: center;
+    /* 水平方向で中央に揃える */
+    min-height: 100vh;
+    /* ビューポート全体の高さを確保 */
+    margin: 0;
+    /* 外部余白をリセット */
+    font-family: Arial, sans-serif;
+    /* 読みやすいフォントを設定 */
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* チェックボックスとラベルを垂直方向で中央に */
+    align-items: center;
+    /* チェックボックスとラベルを水平方向で中央に */
+    gap: 10px;
+    /* 各項目の間隔 */
+    width: 90%;
+    /* 横幅を90%に設定して中央寄せ */
+    max-width: 300px;
+    /* 最大幅を400pxに設定 */
+    margin: 0 auto;
+    /* 水平中央揃え */
+    padding: 20px;
+    /* 内部余白を追加 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 視覚的な枠を追加 */
+    border-radius: 10px;
+    /* 角を丸く */
+    background-color: #F9F9F9;
+    /* 背景色を明るい色に */
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    /* 縦方向の中央揃え */
+    width: 100%;
+    /* チェックボックスとラベルの横幅を最大化 */
+    margin-left: -20px;
+    /* 全体を左にずらす */
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 10px;
+    /* チェックボックスとラベルの間隔 */
+    transform: scale(1);
+    /* チェックボックスを適度に拡大 */
+}
+
+.checkbox-item label {
+    font-size: 0.8em;
+    /* ラベルのフォントサイズを調整 */
+    white-space: nowrap;
+    /* 改行を防ぐ */
+}
+
+.submit-button {
+    margin-top: 10px;
+    /* 上部に余白を追加 */
+    position: relative;
+    /* 相対位置を設定 */
+    left: 0px;
+    /* 必要に応じて値を調整して右寄せ */
+}
+
+.submit-button input[type="submit"] {
+    font-size: 0.7em;
+    /* ボタンのフォントサイズを調整 */
+    padding: 10px 10px;
+    /* ボタンの内側余白を調整 */
+    background-color: #3366FF;
+    /* ボタンの背景色 */
+    color: white;
+    /* ボタンの文字色 */
+    border: none;
+    /* ボタンの枠線を削除 */
+    border-radius: 5px;
+    /* ボタンの角を丸く */
+    cursor: pointer;
+    /* ホバー時にポインタを表示 */
+}
+
+.submit-button input[type="submit"]:hover {
+    background-color: #2853D1;
+    /* ホバー時の色 */
+}
+
+.text_area {
+    text-align: center;
+    /* テキストエリアの中央揃え */
+    margin-bottom: 20px;
+    /* 下部に余白を追加 */
+    width: 90%;
+    /* 横幅を90%に設定 */
+    max-width: 400px;
+    /* 最大幅を400pxに設定 */
+    margin: 0 auto;
+    /* 水平中央揃え */
+}

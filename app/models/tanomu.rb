@@ -1,0 +1,2 @@
+class Tanomu < ApplicationRecord
+end

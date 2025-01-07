@@ -1,0 +1,27 @@
+<%= form_with(model: toko) do |form| %>
+  <% if toko.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(toko.errors.count, "error") %> prohibited this toko from being saved:</h2>
+
+      <ul>
+        <% toko.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :hobby, style: "display: block" %>
+    <%= form.text_field :hobby %>
+  </div>
+
+  <div>
+    <%= form.label :toko, style: "display: block" %>
+    <%= form.text_field :toko %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

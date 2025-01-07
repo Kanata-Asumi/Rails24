@@ -1,0 +1,19 @@
+<h1>新規投稿作成</h1>
+
+<div class="menuall">
+  <span class="menuhome"><%= link_to "Home", home_path %></span>
+  <span> > </span>
+  <span class="menuhome"><%= link_to "ホビー投稿一覧", view_path %></span>
+  <br>
+  <span> > </span>
+  <span class="blue">新規投稿作成</span>
+</div>
+
+<div class="newtweet">
+<%= render "form", tweet: @tweet %>
+<br>
+</div>
+
+<div class="menuall">
+  <%= link_to "投稿一覧へ戻る", tweets_path %>
+</div>

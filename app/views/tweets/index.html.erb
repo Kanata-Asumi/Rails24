@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>投稿一覧</h1>
+
+<div class="menuall">
+  <span class="menuhome"><%= link_to "Home", home_path %></span>
+  <span> > </span>
+  <span class="blue">ホビー投稿一覧</span>
+</div>
+
+<% @tweets.each do |tweet| %>
+<%= render tweet %>
+<% end %>
+
+<div class="menuall">
+  <%= link_to "新規投稿", new_tweet_path %>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8">
+        <title>ユーザー情報</title>
+    </head>
+<h1>ユーザー情報</h1>
+
+<div class="menuall">
+            <span class="menuhome"><%= link_to "Home", home_path %></span>
+            <span> > </span>
+            <span class="blue">ユーザー情報</span>
+        </div>
+<div class="editprofile">
+    <div class="login_area_2">
+        <br>
+        <%= @message %>
+        <br>
+        <br>
+        <%= form_with model: @profile do |f| %>
+            <%= f.label :ユーザーネーム %>
+            <br>
+            &nbsp<%= f.text_field :name, placeholder: "例) 島根太郎" %>
+            <br>
+            <%= f.label :学部ー学科 %>
+            <br>
+            &nbsp<%= f.collection_select :department, Blong.all, :number, :gakubugakka, include_blank: "選択して下さい" %>
+            <br>
+            <%= f.label :学年 %>
+            <br>
+            &nbsp<%= f.select :grade, [["1回生", 1], ["2回生", 2], ["3回生", 3], ["4回生", 4]], include_blank: "選択してください" %>
+            <br>
+            <div class="btn">
+                <%= f.submit "登録" %>
+            </div>    
+        <% end %>
+    </div>
+</div>
